@@ -3,30 +3,22 @@ using UnityEngine.EventSystems;
 
 public class BaseWindow : MonoBehaviour, IDragHandler
 {
-    [SerializeField] private Canvas canvas;
-    [SerializeField] private bool isDraggable = true;
-    [SerializeField] private bool isConfined = true;
+    [SerializeField] protected bool isDraggable = true;
+    [SerializeField] protected bool isConfined = true;
 
-    private RectTransform rectTransform;
+    protected RectTransform rectTransform;
 
-    void Start()
+    protected virtual void Start()
     {
         rectTransform = GetComponent<RectTransform>();
     }
 
-    public void OnDrag(PointerEventData eventData)
+    public virtual void OnDrag(PointerEventData eventData)
     {
         if (!isDraggable) return;
-        if (canvas == null) {
-            canvas = FindFirstObjectByType<Canvas>(); // try to find the canvas if not set
-            if (canvas == null) {
-                Debug.LogError("Canvas not set nor could it be found");
-                return;
-            }
-        }
 
         // calculate new position
-        Vector2 newPosition = rectTransform.anchoredPosition + eventData.delta / canvas.scaleFactor;
+        Vector2 newPosition = rectTransform.anchoredPosition + eventData.delta / Globals.CanvasScaleFactor;
 
         if (isConfined) {
             // calculate bounds
@@ -40,5 +32,10 @@ public class BaseWindow : MonoBehaviour, IDragHandler
 
         // set new position
         rectTransform.anchoredPosition = newPosition;
+    }
+
+    public void DestroySelfGameObject()
+    {
+        Destroy(gameObject);
     }
 }
