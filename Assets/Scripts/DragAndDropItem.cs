@@ -6,11 +6,19 @@ public class DragAndDropItem : MonoBehaviour, IDragHandler, IBeginDragHandler, I
 {
     [HideInInspector] public Transform parentAfterDrag;
 
+    public enum WordType
+    {
+        Social,
+        Academic,
+    }
+
+    public WordType wordType;
+
     private Image image;
 
     private void Start()
     {
-        image = GetComponent<Image>();
+        image = GetComponent<Image>();        
     }
 
     public void OnBeginDrag(PointerEventData eventData)

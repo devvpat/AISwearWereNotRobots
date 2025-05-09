@@ -3,6 +3,8 @@ using UnityEngine.EventSystems;
 
 public class ItemSlot : MonoBehaviour, IDropHandler
 {
+    [SerializeField] private bool isWordBankSlot = true;
+
     public void OnDrop(PointerEventData eventData)
     {
         Debug.Log("DROPPED");
@@ -11,7 +13,11 @@ public class ItemSlot : MonoBehaviour, IDropHandler
             GameObject dropped = eventData.pointerDrag;
             if (dropped == null) return;
             DragAndDropItem item = dropped.GetComponent<DragAndDropItem>();
-            if (item != null ) item.parentAfterDrag = transform;
+            if (item == null) return;
+            if (isWordBankSlot && GameManager.Instance.TryUseKey()) {
+                
+            }
+            item.parentAfterDrag = transform;
         }
     }
 }
