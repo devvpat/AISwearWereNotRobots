@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
     {
         currentDay = 1;
         numberOfKeys = startNumberOfKeys;
+        if (wbKeysText) wbKeysText.text = $"Keys Left: {numberOfKeys}";
     }
 
     public bool TryUseKey()
@@ -72,9 +73,11 @@ public class GameManager : MonoBehaviour
         if (numberOfKeys > 0)
         {
             numberOfKeys--;
-            if (wbKeysText) wbKeysText.text = $"Number of Keys: {numberOfKeys}";
+            if (wbKeysText) wbKeysText.text = $"Keys Left: {numberOfKeys}";
+            Debug.Log($"Used a key. Remaining keys: {numberOfKeys}");
             return true;
         }
+        Debug.Log("No keys left to use.");
         return false;
     }
 
