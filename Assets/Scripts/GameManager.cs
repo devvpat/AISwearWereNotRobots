@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour
     // UI references
     [Header("Settings")]
     [SerializeField] private int startNumberOfKeys = 3;
-    [SerializeField] private int startNumberOfDays = 5;
 
     [Space(25)]
 
@@ -46,13 +45,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text wbKeysText;
 
     // variables
-    private int currentDay;
+    public int CurrentDay { get; private set; }
+
+    private readonly int maxDays = 5;
     private int numberOfKeys;
 
     void Start()
     {
         SetupCursor();
         SetupStats();
+        Globals.CanvasRectTransform = FindAnyObjectByType<Canvas>().GetComponent<RectTransform>();
     }
 
     private void SetupCursor()
@@ -63,7 +65,7 @@ public class GameManager : MonoBehaviour
 
     private void SetupStats()
     {
-        currentDay = 1;
+        CurrentDay = 0;
         numberOfKeys = startNumberOfKeys;
         if (wbKeysText) wbKeysText.text = $"Keys Left: {numberOfKeys}";
     }

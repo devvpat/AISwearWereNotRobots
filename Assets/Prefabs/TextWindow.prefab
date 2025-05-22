@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5197058129127860990}
   - component: {fileID: 3111742884153840710}
   m_Layer: 5
-  m_Name: DefaultPopupWindow
+  m_Name: TextWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -90,7 +90,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06faeb6510b5249f38035bf7135ea938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
   isDraggable: 1
   isConfined: 1
 --- !u!1 &2683906163979375884
@@ -352,7 +351,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3111742884153840710}
         m_TargetAssemblyTypeName: BaseWindow, Assembly-CSharp
-        m_MethodName: DestroySelfGameObject
+        m_MethodName: DesactivateSelfGameObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
