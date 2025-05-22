@@ -12,7 +12,8 @@ public class GameCanvas : MonoBehaviour {
         Globals.CanvasWidth = canvas.GetComponent<RectTransform>().rect.width;
         Globals.CanvasHeight = canvas.GetComponent<RectTransform>().rect.height;
         Globals.CanvasScaleFactor = canvas.scaleFactor;
-        
+        Globals.CanvasRectTransform = canvas.GetComponent<RectTransform>();
+
         Debug.Log($"Canvas Width: {Globals.CanvasWidth}, Height: {Globals.CanvasHeight}, Scale Factor: {Globals.CanvasScaleFactor}");
     }
 }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,23 +20,49 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private enum GameState
+    {
+        BeforeClass,
+        Class,
+        Lunch,
+        AfterClass,
+        Day5AfterClass
+    }
+    private GameState currentGameState;
+
     // UI references
     [Header("Settings")]
     [SerializeField] private int startNumberOfKeys = 3;
 
-    [Space(25)]
+    [Header("Image References: 0 = Normal ... 2 = Angry")]
+    [SerializeField] private Image[] person1Images = new Image[3];
+    [SerializeField] private Image[] person2Images = new Image[3];
+    [SerializeField] private Image[] person3Images = new Image[3];
+    [SerializeField] private Image[] teacherImages = new Image[3];
 
     [Header("Before Class")]
     [SerializeField] private GameObject beforeClassUI;
+    [SerializeField] private GameObject beforeClassPerson1;
+    [SerializeField] private GameObject beforeClassPerson2;
+    [SerializeField] private GameObject beforeClassPerson3;
+    [SerializeField] private GameObject beforeClassTeacher;
     
     [Header("Class")]
     [SerializeField] private GameObject classUI;
+    [SerializeField] private GameObject classTeacher;
 
     [Header("Lunch")]
     [SerializeField] private GameObject lunchUI;
+    [SerializeField] private GameObject lunchPerson1;
+    [SerializeField] private GameObject lunchPerson2;
+    [SerializeField] private GameObject lunchPerson3;
 
     [Header("After Class")]
     [SerializeField] private GameObject afterClassUI;
+    [SerializeField] private GameObject afterClassPerson1;
+    [SerializeField] private GameObject afterClassPerson2;
+    [SerializeField] private GameObject afterClassPerson3;
+    [SerializeField] private GameObject afterClassTeacher;
 
     [Header("Day 5 After Class")]
     [SerializeField] private GameObject day5AfterClassUI;
@@ -43,18 +70,22 @@ public class GameManager : MonoBehaviour
     [Header("Other References")]
     [SerializeField] private GameObject wordBank;
     [SerializeField] private TMP_Text wbKeysText;
+    [SerializeField] private GameObject wordBankButton;
+    [SerializeField] private GameObject advanceButton;
 
     // variables
     public int CurrentDay { get; private set; }
 
     private readonly int maxDays = 5;
     private int numberOfKeys;
+    private int socialPoints;
+    private int academicPoints;
 
     void Start()
     {
         SetupCursor();
         SetupStats();
-        Globals.CanvasRectTransform = FindAnyObjectByType<Canvas>().GetComponent<RectTransform>();
+        StartGame();
     }
 
     private void SetupCursor()
@@ -66,8 +97,113 @@ public class GameManager : MonoBehaviour
     private void SetupStats()
     {
         CurrentDay = 0;
+        socialPoints = 0;
+        academicPoints = 0;
         numberOfKeys = startNumberOfKeys;
         if (wbKeysText) wbKeysText.text = $"Keys Left: {numberOfKeys}";
+        currentGameState = GameState.BeforeClass;
+    }
+
+    private void StartGame()
+    {
+        Debug.Log("Game Started");
+        PrintStats();
+
+        beforeClassUI.SetActive(true);
+        classUI.SetActive(false);
+        lunchUI.SetActive(false);
+        afterClassUI.SetActive(false);
+        day5AfterClassUI.SetActive(false);
+
+        wordBank.SetActive(true);
+    }
+
+    public void AdvanceScene()
+    {
+        switch (currentGameState)
+        {
+            case GameState.BeforeClass:
+                beforeClassUI.SetActive(false);
+                UpdateClassUI();
+                classUI.SetActive(true);
+                currentGameState = GameState.Class;
+                PrintStats();
+                break;
+
+            case GameState.Class:
+                classUI.SetActive(false);
+                UpdateLunchUI();
+                lunchUI.SetActive(true);
+                currentGameState = GameState.Lunch;
+                PrintStats();
+                break;
+
+            case GameState.Lunch:
+                if (CurrentDay == maxDays - 1)
+                {
+                    lunchUI.SetActive(false);
+                    day5AfterClassUI.SetActive(true);
+                    currentGameState = GameState.Day5AfterClass;
+                    PrintStats();
+                    EndGame();
+                }
+                else
+                {
+                    lunchUI.SetActive(false);
+                    UpdateAfterClassUI();
+                    afterClassUI.SetActive(true);
+                    currentGameState = GameState.AfterClass;
+                    PrintStats();
+                }
+                break;
+
+            case GameState.AfterClass:
+                afterClassUI.SetActive(false);
+                UpdateBeforeClassUI();
+                beforeClassUI.SetActive(true);
+                currentGameState = GameState.BeforeClass;
+                AdvanceDay();
+                PrintStats();
+                break;
+        }
+    }
+
+    private void AdvanceDay()
+    {
+        CurrentDay++;
+    }
+
+    private void EndGame()
+    {
+        wordBank.SetActive(false);
+        wordBankButton.SetActive(false);
+        advanceButton.SetActive(false);
+        Debug.Log("Game Over");
+    }
+
+    private void UpdateBeforeClassUI()
+    {
+        Debug.Log("Updating Before Class UI");
+    }
+
+    private void UpdateClassUI()
+    {
+        Debug.Log("Updating Class UI");
+    }
+
+    private void UpdateLunchUI()
+    {
+        Debug.Log("Updating Lunch UI");
+    }
+
+    private void UpdateAfterClassUI()
+    {
+        Debug.Log("Updating After Class UI");
+    }
+
+    private void PrintStats()
+    {
+        Debug.Log($"Day {CurrentDay + 1} - {currentGameState}, Social Points: {socialPoints}, Academic Points: {academicPoints}, Keys: {numberOfKeys}");
     }
 
     public bool TryUseKey()
