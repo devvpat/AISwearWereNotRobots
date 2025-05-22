@@ -35,11 +35,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int startNumberOfKeys = 3;
     [SerializeField] private int newKeysPerDay = 3;
 
-    [Header("Image References: 0 = Normal ... 2 = Angry")]
-    [SerializeField] private Image[] person1Images = new Image[3];
-    [SerializeField] private Image[] person2Images = new Image[3];
-    [SerializeField] private Image[] person3Images = new Image[3];
-    [SerializeField] private Image[] teacherImages = new Image[3];
+    [Header("Sprite References: 0 = Normal ... 2 = Angry")]
+    [SerializeField] private Sprite[] person1Sprites = new Sprite[3];
+    [SerializeField] private Sprite[] person2Sprites = new Sprite[3];
+    [SerializeField] private Sprite[] person3Sprites = new Sprite[3];
+    [SerializeField] private Sprite[] teacherSprites = new Sprite[3];
 
     [Header("Before Class")]
     [SerializeField] private GameObject beforeClassUI;
@@ -259,6 +259,10 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Updating Before Class UI");
         DeactivateAllChildren(beforeClassWindowHolder);
+        UpdateImage(beforeClassPerson1, person1Sprites, socialPoints);
+        UpdateImage(beforeClassPerson2, person2Sprites, socialPoints);
+        UpdateImage(beforeClassPerson3, person3Sprites, socialPoints);
+        UpdateImage(beforeClassTeacher, teacherSprites, academicPoints);
     }
 
     private void DeactivateAllChildren(GameObject parent)
@@ -272,16 +276,46 @@ public class GameManager : MonoBehaviour
     private void UpdateClassUI()
     {
         Debug.Log("Updating Class UI");
+        UpdateImage(classTeacher, teacherSprites, academicPoints);
     }
 
     private void UpdateLunchUI()
     {
         Debug.Log("Updating Lunch UI");
+        UpdateImage(lunchPerson1, person1Sprites, socialPoints);
+        UpdateImage(lunchPerson2, person2Sprites, socialPoints);
+        UpdateImage(lunchPerson3, person3Sprites, socialPoints);
     }
 
     private void UpdateAfterClassUI()
     {
         Debug.Log("Updating After Class UI");
+        UpdateImage(afterClassPerson1, person1Sprites, socialPoints);
+        UpdateImage(afterClassPerson2, person2Sprites, socialPoints);
+        UpdateImage(afterClassPerson3, person3Sprites, socialPoints);
+        UpdateImage(afterClassTeacher, teacherSprites, academicPoints);
+    }
+
+    private void UpdateImage(GameObject obj, Sprite[] sprites, int index)
+    {
+        if (index < 0 || index >= sprites.Length)
+        {
+            Debug.LogError($"Index {index} out of bounds for sprites array on {obj.name}");
+            return;
+        }
+        if (obj.TryGetComponent<Image>(out Image img))
+        {
+            if (sprites[index] == null)
+            {
+                Debug.LogError($"Sprite at index {index} is null during UpdateImage on {obj.name}");
+                return;
+            }
+            img.sprite = sprites[index];
+        }
+        else
+        {
+            Debug.LogError($"Image component not found on {obj.name}");
+        }
     }
 
     private void PrintStats()
