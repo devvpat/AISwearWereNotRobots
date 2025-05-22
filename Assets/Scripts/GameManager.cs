@@ -50,12 +50,16 @@ public class GameManager : MonoBehaviour
     [Header("Class")]
     [SerializeField] private GameObject classUI;
     [SerializeField] private GameObject classTeacher;
+    [SerializeField] private GameObject classSlot1;
+    [SerializeField] private GameObject classSlot2;
 
     [Header("Lunch")]
     [SerializeField] private GameObject lunchUI;
     [SerializeField] private GameObject lunchPerson1;
     [SerializeField] private GameObject lunchPerson2;
     [SerializeField] private GameObject lunchPerson3;
+    [SerializeField] private GameObject lunchSlot1;
+    [SerializeField] private GameObject lunchSlot2;
 
     [Header("After Class")]
     [SerializeField] private GameObject afterClassUI;
@@ -132,6 +136,7 @@ public class GameManager : MonoBehaviour
 
             case GameState.Class:
                 classUI.SetActive(false);
+                PlayClassMinigame();
                 UpdateLunchUI();
                 lunchUI.SetActive(true);
                 currentGameState = GameState.Lunch;
@@ -142,6 +147,7 @@ public class GameManager : MonoBehaviour
                 if (CurrentDay == maxDays - 1)
                 {
                     lunchUI.SetActive(false);
+                    PlayLunchMinigame();
                     day5AfterClassUI.SetActive(true);
                     currentGameState = GameState.Day5AfterClass;
                     PrintStats();
@@ -150,6 +156,7 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     lunchUI.SetActive(false);
+                    PlayLunchMinigame();
                     UpdateAfterClassUI();
                     afterClassUI.SetActive(true);
                     currentGameState = GameState.AfterClass;
@@ -179,6 +186,40 @@ public class GameManager : MonoBehaviour
         wordBankButton.SetActive(false);
         advanceButton.SetActive(false);
         Debug.Log("Game Over");
+    }
+
+    private void FailGame()
+    {
+        Debug.Log("Game Failed");
+    }
+
+    private void PlayClassMinigame()
+    {
+        Debug.Log("Playing Class Minigame");
+        academicPoints += Evaluateslot(classSlot1, DragAndDropItem.WordType.Academic);
+        academicPoints += Evaluateslot(classSlot2, DragAndDropItem.WordType.Academic);
+        // clamp academicPoints to [0, 3] (inclusive)
+        academicPoints = Mathf.Clamp(academicPoints, 0, 3);
+    }
+
+    private void PlayLunchMinigame()
+    {
+        Debug.Log("Playing Lunch Minigame");
+        socialPoints += Evaluateslot(lunchSlot1, DragAndDropItem.WordType.Social);
+        socialPoints += Evaluateslot(lunchSlot2, DragAndDropItem.WordType.Social);
+        // clamp socialPoints to [0, 3] (inclusive)
+        socialPoints = Mathf.Clamp(socialPoints, 0, 3);
+    }
+
+    private int Evaluateslot(GameObject slot, DragAndDropItem.WordType wordType)
+    {
+        if (slot.transform.childCount != 1) return 0;
+
+        GameObject child = slot.transform.GetChild(0).gameObject;
+        DragAndDropItem item = child.GetComponent<DragAndDropItem>();
+        
+        if (item.wordType == wordType) return -1; // Correct
+        else return 1;  // Incorrect
     }
 
     private void UpdateBeforeClassUI()
