@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     // UI references
     [Header("Settings")]
     [SerializeField] private int startNumberOfKeys = 3;
+    [SerializeField] private int newKeysPerDay = 3;
 
     [Header("Image References: 0 = Normal ... 2 = Angry")]
     [SerializeField] private Image[] person1Images = new Image[3];
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject beforeClassPerson2;
     [SerializeField] private GameObject beforeClassPerson3;
     [SerializeField] private GameObject beforeClassTeacher;
+    [SerializeField] private GameObject beforeClassWindowHolder;
     
     [Header("Class")]
     [SerializeField] private GameObject classUI;
@@ -76,6 +78,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text wbKeysText;
     [SerializeField] private GameObject wordBankButton;
     [SerializeField] private GameObject advanceButton;
+    [SerializeField] private GameObject failGameUI;
 
     // variables
     public int CurrentDay { get; private set; }
@@ -87,9 +90,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        SetupCursor();
         SetupStats();
         StartGame();
+        SetupCursor();
     }
 
     private void SetupCursor()
@@ -118,6 +121,7 @@ public class GameManager : MonoBehaviour
         lunchUI.SetActive(false);
         afterClassUI.SetActive(false);
         day5AfterClassUI.SetActive(false);
+        failGameUI.SetActive(false);
 
         wordBank.SetActive(true);
     }
@@ -137,6 +141,11 @@ public class GameManager : MonoBehaviour
             case GameState.Class:
                 classUI.SetActive(false);
                 PlayClassMinigame();
+                if (IsGameFailed())
+                {
+                    FailGame();
+                    return;
+                }
                 UpdateLunchUI();
                 lunchUI.SetActive(true);
                 currentGameState = GameState.Lunch;
@@ -144,19 +153,24 @@ public class GameManager : MonoBehaviour
                 break;
 
             case GameState.Lunch:
+                lunchUI.SetActive(false);
+                PlayLunchMinigame();
+                if (IsGameFailed())
+                {
+                    FailGame();
+                    return;
+                }
+                // skip after class on day 5
                 if (CurrentDay == maxDays - 1)
                 {
-                    lunchUI.SetActive(false);
-                    PlayLunchMinigame();
                     day5AfterClassUI.SetActive(true);
                     currentGameState = GameState.Day5AfterClass;
                     PrintStats();
                     EndGame();
                 }
+                // show normal after class for days 1-4
                 else
                 {
-                    lunchUI.SetActive(false);
-                    PlayLunchMinigame();
                     UpdateAfterClassUI();
                     afterClassUI.SetActive(true);
                     currentGameState = GameState.AfterClass;
@@ -178,6 +192,7 @@ public class GameManager : MonoBehaviour
     private void AdvanceDay()
     {
         CurrentDay++;
+        numberOfKeys += newKeysPerDay;
     }
 
     private void EndGame()
@@ -188,16 +203,25 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Over");
     }
 
+    private bool IsGameFailed()
+    {
+        return socialPoints > 2 || academicPoints > 2;
+    }
+
     private void FailGame()
     {
         Debug.Log("Game Failed");
+        wordBank.SetActive(false);
+        wordBankButton.SetActive(false);
+        advanceButton.SetActive(false);
+        failGameUI.SetActive(true);
     }
 
     private void PlayClassMinigame()
     {
         Debug.Log("Playing Class Minigame");
-        academicPoints += Evaluateslot(classSlot1, DragAndDropItem.WordType.Academic);
-        academicPoints += Evaluateslot(classSlot2, DragAndDropItem.WordType.Academic);
+        academicPoints += EvaluateSlot(classSlot1, DragAndDropItem.WordType.Academic);
+        academicPoints += EvaluateSlot(classSlot2, DragAndDropItem.WordType.Academic);
         // clamp academicPoints to [0, 3] (inclusive)
         academicPoints = Mathf.Clamp(academicPoints, 0, 3);
     }
@@ -205,26 +229,44 @@ public class GameManager : MonoBehaviour
     private void PlayLunchMinigame()
     {
         Debug.Log("Playing Lunch Minigame");
-        socialPoints += Evaluateslot(lunchSlot1, DragAndDropItem.WordType.Social);
-        socialPoints += Evaluateslot(lunchSlot2, DragAndDropItem.WordType.Social);
+        socialPoints += EvaluateSlot(lunchSlot1, DragAndDropItem.WordType.Social);
+        socialPoints += EvaluateSlot(lunchSlot2, DragAndDropItem.WordType.Social);
         // clamp socialPoints to [0, 3] (inclusive)
         socialPoints = Mathf.Clamp(socialPoints, 0, 3);
     }
 
-    private int Evaluateslot(GameObject slot, DragAndDropItem.WordType wordType)
+    private int EvaluateSlot(GameObject slot, DragAndDropItem.WordType wordType)
     {
-        if (slot.transform.childCount != 1) return 0;
-
-        GameObject child = slot.transform.GetChild(0).gameObject;
-        DragAndDropItem item = child.GetComponent<DragAndDropItem>();
-        
-        if (item.wordType == wordType) return -1; // Correct
-        else return 1;  // Incorrect
+        int val = 0;
+        if (slot.transform.childCount != 1) val = 1; // Incorrect
+        else
+        {
+            GameObject child = slot.transform.GetChild(0).gameObject;
+            child.TryGetComponent<DragAndDropItem>(out DragAndDropItem item);
+            if (item == null) val = 1; // Incorrect
+            else if (item.wordType == wordType) val = -1; // Correct
+            else val = 1; // Incorrect
+        }
+        // remove all children of slot
+        foreach (Transform child in slot.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        return val;
     }
 
     private void UpdateBeforeClassUI()
     {
         Debug.Log("Updating Before Class UI");
+        DeactivateAllChildren(beforeClassWindowHolder);
+    }
+
+    private void DeactivateAllChildren(GameObject parent)
+    {
+        foreach (Transform child in parent.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
     }
 
     private void UpdateClassUI()
