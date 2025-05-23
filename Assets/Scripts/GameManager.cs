@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject beforeClassPerson3;
     [SerializeField] private GameObject beforeClassTeacher;
     [SerializeField] private GameObject beforeClassWindowHolder;
-    
+
     [Header("Class")]
     [SerializeField] private GameObject classUI;
     [SerializeField] private GameObject classTeacher;
@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
         socialPoints = 0;
         academicPoints = 0;
         numberOfKeys = startNumberOfKeys;
-        if (wbKeysText) wbKeysText.text = $"Keys Left: {numberOfKeys}";
+        SetKeyText();
         currentGameState = GameState.BeforeClass;
     }
 
@@ -122,6 +122,8 @@ public class GameManager : MonoBehaviour
         afterClassUI.SetActive(false);
         day5AfterClassUI.SetActive(false);
         failGameUI.SetActive(false);
+        advanceButton.SetActive(false);
+        wordBankButton.SetActive(true);
 
         wordBank.SetActive(true);
     }
@@ -192,7 +194,7 @@ public class GameManager : MonoBehaviour
     private void AdvanceDay()
     {
         CurrentDay++;
-        numberOfKeys += newKeysPerDay;
+        AddKey(newKeysPerDay);
     }
 
     private void EndGame()
@@ -259,6 +261,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Updating Before Class UI");
         DeactivateAllChildren(beforeClassWindowHolder);
+        advanceButton.SetActive(false);
         UpdateImage(beforeClassPerson1, person1Sprites, socialPoints);
         UpdateImage(beforeClassPerson2, person2Sprites, socialPoints);
         UpdateImage(beforeClassPerson3, person3Sprites, socialPoints);
@@ -330,6 +333,10 @@ public class GameManager : MonoBehaviour
             numberOfKeys--;
             if (wbKeysText) wbKeysText.text = $"Keys Left: {numberOfKeys}";
             Debug.Log($"Used a key. Remaining keys: {numberOfKeys}");
+            if (numberOfKeys == 0 && currentGameState == GameState.BeforeClass)
+            {
+                advanceButton.SetActive(true);
+            }
             return true;
         }
         Debug.Log("No keys left to use.");
@@ -339,6 +346,11 @@ public class GameManager : MonoBehaviour
     public void AddKey(int amount)
     {
         numberOfKeys += amount;
-        wbKeysText.text = $"Number of Keys: {numberOfKeys}";
+        SetKeyText();
+    }
+    
+    private void SetKeyText()
+    {
+        if (wbKeysText) wbKeysText.text = $"Keys Left: {numberOfKeys}";
     }
 }
