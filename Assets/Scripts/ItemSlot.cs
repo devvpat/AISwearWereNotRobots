@@ -17,13 +17,28 @@ public class ItemSlot : MonoBehaviour, IDropHandler
             bool prevParentIsWordBank = item.parentAfterDrag.GetComponent<ItemSlot>().isWordBankSlot;
             Debug.Log("DROP INFO:\nPrevious Parent word bank: " + prevParentIsWordBank + "\nCurrent Parent word bank: " + isWordBankSlot);
             // use key if wordbank slot and previous parent was not a wordbank slot
-            if (isWordBankSlot && !prevParentIsWordBank && GameManager.Instance.TryUseKey()) {
+            if (isWordBankSlot && !prevParentIsWordBank && GameManager.Instance.TryUseKey())
+            {
                 item.parentAfterDrag = transform;
+                // add word if target is wordbank slot and previous parent was not a wordbank slot
+                if (isWordBankSlot && !prevParentIsWordBank)
+                {
+                    GameManager.Instance.wordBankComp.AddWord(item.wordType);
+                }
+            }
             // dont use key if target is not wordbank slot OR target is wordbank and previous parent was also wordbank
-            } else if (!isWordBankSlot || (isWordBankSlot && prevParentIsWordBank)) {
+            else if (!isWordBankSlot || (isWordBankSlot && prevParentIsWordBank))
+            {
                 item.parentAfterDrag = transform;
-            // print message if no keys left
-            } else {
+                // remove word if target is not wordbank slot and previous parent was wordbank slot
+                if (!isWordBankSlot && prevParentIsWordBank)
+                {
+                    GameManager.Instance.wordBankComp.RemoveWord(item.wordType);
+                }
+                // print message if no keys left
+            }
+            else
+            {
                 Debug.Log("Word Bank: No keys left to use.");
             }
         }

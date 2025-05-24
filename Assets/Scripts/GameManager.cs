@@ -69,12 +69,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject afterClassPerson2;
     [SerializeField] private GameObject afterClassPerson3;
     [SerializeField] private GameObject afterClassTeacher;
+    [SerializeField] private TMP_Text afterClassText;
+    [SerializeField] private GameObject afterClassButton;
 
     [Header("Day 5 After Class")]
     [SerializeField] private GameObject day5AfterClassUI;
 
     [Header("Other References")]
     [SerializeField] private GameObject wordBank;
+    public WordBank wordBankComp;
     [SerializeField] private TMP_Text wbKeysText;
     [SerializeField] private GameObject wordBankButton;
     [SerializeField] private GameObject advanceButton;
@@ -87,6 +90,7 @@ public class GameManager : MonoBehaviour
     private int numberOfKeys;
     private int socialPoints;
     private int academicPoints;
+    private DragAndDropItem.WordType afterClassPointType;
 
     void Start()
     {
@@ -297,6 +301,27 @@ public class GameManager : MonoBehaviour
         UpdateImage(afterClassPerson2, person2Sprites, socialPoints);
         UpdateImage(afterClassPerson3, person3Sprites, socialPoints);
         UpdateImage(afterClassTeacher, teacherSprites, academicPoints);
+
+        int res = UnityEngine.Random.Range(0, 2);
+        if (res == 0) afterClassPointType = DragAndDropItem.WordType.Social;
+        else afterClassPointType = DragAndDropItem.WordType.Academic;
+        afterClassText.text = $"Would you like to participate in {(afterClassPointType == DragAndDropItem.WordType.Social ? "a" : "an")} " +
+                              $"{afterClassPointType.ToString().ToLower()} after class activity? You will gain {afterClassPointType.ToString().ToLower()} word(s) " +
+                              $"and lose {(afterClassPointType == DragAndDropItem.WordType.Social ? "academic" : "social")} word(s).";
+    }
+
+    public void OnAfterClassButtonClick()
+    {
+        int num = UnityEngine.Random.Range(1, 3); // 1 or 2
+        for (int i = 0; i < num; i++)
+        {
+            if (afterClassPointType == DragAndDropItem.WordType.Social) wordBankComp.TryRemoveWord(DragAndDropItem.WordType.Academic);
+            else wordBankComp.TryRemoveWord(DragAndDropItem.WordType.Social);
+
+            wordBankComp.TryAddWord(afterClassPointType);
+        }
+        AdvanceScene();
+        Debug.Log($"After Class Button Clicked: Added {num} {afterClassPointType} word(s) and removed {num} {(afterClassPointType == DragAndDropItem.WordType.Social ? "academic" : "social")} word(s).");
     }
 
     private void UpdateImage(GameObject obj, Sprite[] sprites, int index)
