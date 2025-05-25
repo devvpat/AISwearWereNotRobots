@@ -91,6 +91,7 @@ public class GameManager : MonoBehaviour
     private int socialPoints;
     private int academicPoints;
     private DragAndDropItem.WordType afterClassPointType;
+    private int currMinigameWordsUsed;
 
     void Start()
     {
@@ -290,6 +291,9 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Updating Class UI");
         UpdateImage(classTeacher, teacherSprites, academicPoints);
+        // enable advance button if word bank is empty otherwise disable it
+        advanceButton.SetActive(wordBankComp.IsEmpty());
+        currMinigameWordsUsed = 0; // reset words used for class minigame
     }
 
     private void UpdateLunchUI()
@@ -298,6 +302,9 @@ public class GameManager : MonoBehaviour
         UpdateImage(lunchPerson1, person1Sprites, socialPoints);
         UpdateImage(lunchPerson2, person2Sprites, socialPoints);
         UpdateImage(lunchPerson3, person3Sprites, socialPoints);
+        // enable advance button if word bank is empty otherwise disable it
+        advanceButton.SetActive(wordBankComp.IsEmpty());
+        currMinigameWordsUsed = 0; // reset words used for lunch minigame
     }
 
     private void UpdateAfterClassUI()
@@ -372,6 +379,26 @@ public class GameManager : MonoBehaviour
         }
         Debug.Log("No keys left to use.");
         return false;
+    }
+
+    public void OnUseWordFromWordBankDuringMinigame()
+    {
+        if (currentGameState == GameState.Class || currentGameState == GameState.Lunch)
+        {
+            Debug.Log("Word used from word bank during minigame.");
+            currMinigameWordsUsed++;
+            Debug.Log($"Current Minigame Words Used: {currMinigameWordsUsed}");
+            // if num used words == 1 and word bank is empty, enable advance button
+            if (currMinigameWordsUsed == 1 && wordBankComp.IsEmpty())
+            {
+                advanceButton.SetActive(true);
+            }
+            // if num used words == 2, enable advance button
+            else if (currMinigameWordsUsed == 2)
+            {
+                advanceButton.SetActive(true);
+            }
+        }
     }
 
     public void AddKey(int amount)

@@ -94,4 +94,9 @@ public class WordBank : BaseWindow
         }
         return true;
     }
+
+    public bool IsEmpty()
+    {
+        return numUsedSlots == 0;
+    }
 }

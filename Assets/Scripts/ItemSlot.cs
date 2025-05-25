@@ -34,6 +34,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
                 if (!isWordBankSlot && prevParentIsWordBank)
                 {
                     GameManager.Instance.wordBankComp.RemoveWord(item.wordType);
+                    GameManager.Instance.OnUseWordFromWordBankDuringMinigame();
                 }
                 // print message if no keys left
             }
