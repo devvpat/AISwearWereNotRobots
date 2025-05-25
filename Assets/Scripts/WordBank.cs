@@ -1,8 +1,10 @@
 using UnityEngine;
+using TMPro;
 
 public class WordBank : BaseWindow
 {
     [SerializeField] private GameObject slotHolder;
+    [SerializeField] private GameObject defaultWordPrefab;
     [SerializeField] private GameObject defaultAcademicWordPrefab;
     [SerializeField] private GameObject defaultSocialWordPrefab;
 
@@ -46,15 +48,33 @@ public class WordBank : BaseWindow
         {
             if (slot.childCount == 0)
             {
-                GameObject wordPrefab = wordType == DragAndDropItem.WordType.Social ? defaultSocialWordPrefab : defaultAcademicWordPrefab;
-                GameObject newWord = Instantiate(wordPrefab, slot);
-                newWord.GetComponent<DragAndDropItem>().wordType = wordType;
+                CreateNewWord(wordType, slot);
+
                 // Debug.Log($"Word Bank: Added {wordType} word prefab to slot {slot.name}");
                 AddWord(wordType);
                 break;
             }
         }
         return true;
+    }
+
+    public GameObject CreateNewWord(DragAndDropItem.WordType wordType, Transform slot, string wordText = null)
+    {
+        // instantiate the word prefab, attach it to the slot, and set its wordType
+        GameObject newWord = Instantiate(defaultWordPrefab, slot);
+        newWord.GetComponent<DragAndDropItem>().wordType = wordType;
+        // randomly choose the text if wordText is null
+        if (wordText != null)
+        {
+            newWord.transform.GetChild(0).GetComponent<TMP_Text>().text = wordText;
+        }
+        else
+        {
+            string[] words = wordType == DragAndDropItem.WordType.Social ? Globals.SocialWords : Globals.AcademicWords;
+            int randomIndex = UnityEngine.Random.Range(0, words.Length);
+            newWord.transform.GetChild(0).GetComponent<TMP_Text>().text = words[randomIndex];
+        }
+        return newWord;
     }
 
     public void RemoveWord(DragAndDropItem.WordType wordType)

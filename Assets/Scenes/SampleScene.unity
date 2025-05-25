@@ -10991,6 +10991,7 @@ MonoBehaviour:
   isDraggable: 1
   isConfined: 1
   slotHolder: {fileID: 967947175}
+  defaultWordPrefab: {fileID: 7461729876551674940, guid: ce4c262fa98bab94885287b1e9531323, type: 3}
   defaultAcademicWordPrefab: {fileID: 7461729876551674940, guid: 8d194d0d6b60145579f5460b1a54ae82, type: 3}
   defaultSocialWordPrefab: {fileID: 7461729876551674940, guid: da459faf78af643aea63ca3a952a4b46, type: 3}
 --- !u!114 &1102353493
