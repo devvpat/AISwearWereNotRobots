@@ -226,8 +226,11 @@ public class GameManager : MonoBehaviour
     private void PlayClassMinigame()
     {
         Debug.Log("Playing Class Minigame");
-        academicPoints += EvaluateSlot(classSlot1, DragAndDropItem.WordType.Academic);
-        academicPoints += EvaluateSlot(classSlot2, DragAndDropItem.WordType.Academic);
+        int score = 0;
+        score += EvaluateSlot(classSlot1, DragAndDropItem.WordType.Academic);
+        score += EvaluateSlot(classSlot2, DragAndDropItem.WordType.Academic);
+        academicPoints += score == -2 ? -1 : 1; // -1 if both slots correct, else +1
+        Debug.Log($"Class Minigame Score: {score}, Academic Points: {academicPoints}");
         // clamp academicPoints to [0, 3] (inclusive)
         academicPoints = Mathf.Clamp(academicPoints, 0, 3);
     }
@@ -235,15 +238,18 @@ public class GameManager : MonoBehaviour
     private void PlayLunchMinigame()
     {
         Debug.Log("Playing Lunch Minigame");
-        socialPoints += EvaluateSlot(lunchSlot1, DragAndDropItem.WordType.Social);
-        socialPoints += EvaluateSlot(lunchSlot2, DragAndDropItem.WordType.Social);
+        int score = 0;
+        score += EvaluateSlot(lunchSlot1, DragAndDropItem.WordType.Social);
+        score += EvaluateSlot(lunchSlot2, DragAndDropItem.WordType.Social);
+        socialPoints += score == -2 ? -1 : 1; // -1 if both slots correct, else +1
+        Debug.Log($"Lunch Minigame Score: {score}, Social Points: {socialPoints}");
         // clamp socialPoints to [0, 3] (inclusive)
         socialPoints = Mathf.Clamp(socialPoints, 0, 3);
     }
 
     private int EvaluateSlot(GameObject slot, DragAndDropItem.WordType wordType)
     {
-        int val = 0;
+        int val;
         if (slot.transform.childCount != 1) val = 1; // Incorrect
         else
         {
