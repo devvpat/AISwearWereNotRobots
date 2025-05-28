@@ -35,12 +35,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int startNumberOfKeys = 3;
     [SerializeField] private int newKeysPerDay = 3;
 
-    [Header("Sprite References: 0 = Normal ... 2 = Angry")]
-    [SerializeField] private Sprite[] person1Sprites = new Sprite[3];
-    [SerializeField] private Sprite[] person2Sprites = new Sprite[3];
-    [SerializeField] private Sprite[] person3Sprites = new Sprite[3];
-    [SerializeField] private Sprite[] teacherSprites = new Sprite[3];
-
     [Header("Before Class")]
     [SerializeField] private GameObject beforeClassUI;
     [SerializeField] private GameObject[] beforeClassPerson1ChildrenObjects = new GameObject[3];
@@ -52,25 +46,25 @@ public class GameManager : MonoBehaviour
 
     [Header("Class")]
     [SerializeField] private GameObject classUI;
-    [SerializeField] private GameObject classTeacher;
     [SerializeField] private GameObject classSlot1;
     [SerializeField] private GameObject classSlot2;
+    [SerializeField] private GameObject classBackgroundImage;
     [SerializeField] private Sprite[] classBackgroundSprites = new Sprite[3];
 
     [Header("Lunch")]
     [SerializeField] private GameObject lunchUI;
-    [SerializeField] private GameObject lunchPerson1;
-    [SerializeField] private GameObject lunchPerson2;
-    [SerializeField] private GameObject lunchPerson3;
     [SerializeField] private GameObject lunchSlot1;
     [SerializeField] private GameObject lunchSlot2;
+    [SerializeField] private GameObject lunchBackgroundImage;
+    [SerializeField] private Sprite[] lunchBackgroundSprites = new Sprite[3];
 
     [Header("After Class")]
     [SerializeField] private GameObject afterClassUI;
-    [SerializeField] private GameObject afterClassPerson1;
-    [SerializeField] private GameObject afterClassPerson2;
-    [SerializeField] private GameObject afterClassPerson3;
-    [SerializeField] private GameObject afterClassTeacher;
+    [SerializeField] private GameObject[] afterClassPerson1ChildrenObjects = new GameObject[3];
+    [SerializeField] private GameObject[] afterClassPerson2ChildrenObjects = new GameObject[3];
+    [SerializeField] private GameObject[] afterClassPerson3ChildrenObjects = new GameObject[3];
+    [SerializeField] private GameObject[] afterClassTeacherChildrenObjects = new GameObject[3];
+    [SerializeField] private GameObject[] afterClassBoardChildrenObjects = new GameObject[3];
     [SerializeField] private TMP_Text afterClassText;
     [SerializeField] private GameObject afterClassButton;
 
@@ -294,7 +288,7 @@ public class GameManager : MonoBehaviour
     private void UpdateClassUI()
     {
         Debug.Log("Updating Class UI");
-        UpdateImage(classTeacher, teacherSprites, academicPoints);
+        UpdateImage(classBackgroundImage, classBackgroundSprites, academicPoints);
         // enable advance button if word bank is empty otherwise disable it
         advanceButton.SetActive(wordBankComp.IsEmpty());
         currMinigameWordsUsed = 0; // reset words used for class minigame
@@ -303,9 +297,7 @@ public class GameManager : MonoBehaviour
     private void UpdateLunchUI()
     {
         Debug.Log("Updating Lunch UI");
-        UpdateImage(lunchPerson1, person1Sprites, socialPoints);
-        UpdateImage(lunchPerson2, person2Sprites, socialPoints);
-        UpdateImage(lunchPerson3, person3Sprites, socialPoints);
+        UpdateImage(lunchBackgroundImage, lunchBackgroundSprites, socialPoints);
         // enable advance button if word bank is empty otherwise disable it
         advanceButton.SetActive(wordBankComp.IsEmpty());
         currMinigameWordsUsed = 0; // reset words used for lunch minigame
@@ -314,10 +306,11 @@ public class GameManager : MonoBehaviour
     private void UpdateAfterClassUI()
     {
         Debug.Log("Updating After Class UI");
-        UpdateImage(afterClassPerson1, person1Sprites, socialPoints);
-        UpdateImage(afterClassPerson2, person2Sprites, socialPoints);
-        UpdateImage(afterClassPerson3, person3Sprites, socialPoints);
-        UpdateImage(afterClassTeacher, teacherSprites, academicPoints);
+        UpdateImageGameObject(afterClassPerson1ChildrenObjects, socialPoints);
+        UpdateImageGameObject(afterClassPerson2ChildrenObjects, socialPoints);
+        UpdateImageGameObject(afterClassPerson3ChildrenObjects, socialPoints);
+        UpdateImageGameObject(afterClassTeacherChildrenObjects, academicPoints);
+        UpdateImageGameObject(afterClassBoardChildrenObjects, socialPoints);
 
         int res = UnityEngine.Random.Range(0, 2);
         if (res == 0) afterClassPointType = DragAndDropItem.WordType.Social;
