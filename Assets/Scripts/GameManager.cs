@@ -43,10 +43,11 @@ public class GameManager : MonoBehaviour
 
     [Header("Before Class")]
     [SerializeField] private GameObject beforeClassUI;
-    [SerializeField] private GameObject beforeClassPerson1;
-    [SerializeField] private GameObject beforeClassPerson2;
-    [SerializeField] private GameObject beforeClassPerson3;
-    [SerializeField] private GameObject beforeClassTeacher;
+    [SerializeField] private GameObject[] beforeClassPerson1ChildrenObjects = new GameObject[3];
+    [SerializeField] private GameObject[] beforeClassPerson2ChildrenObjects = new GameObject[3];
+    [SerializeField] private GameObject[] beforeClassPerson3ChildrenObjects = new GameObject[3];
+    [SerializeField] private GameObject[] beforeClassTeacherChildrenObjects = new GameObject[3];
+    [SerializeField] private GameObject[] beforeClassBoardChildrenObjects = new GameObject[3];
     [SerializeField] private GameObject beforeClassWindowHolder;
 
     [Header("Class")]
@@ -54,6 +55,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject classTeacher;
     [SerializeField] private GameObject classSlot1;
     [SerializeField] private GameObject classSlot2;
+    [SerializeField] private Sprite[] classBackgroundSprites = new Sprite[3];
 
     [Header("Lunch")]
     [SerializeField] private GameObject lunchUI;
@@ -118,6 +120,7 @@ public class GameManager : MonoBehaviour
 
     private void StartGame()
     {
+        UpdateBeforeClassUI();
         Debug.Log("Game Started");
         PrintStats();
 
@@ -273,10 +276,11 @@ public class GameManager : MonoBehaviour
         Debug.Log("Updating Before Class UI");
         DeactivateAllChildren(beforeClassWindowHolder);
         advanceButton.SetActive(false);
-        UpdateImage(beforeClassPerson1, person1Sprites, socialPoints);
-        UpdateImage(beforeClassPerson2, person2Sprites, socialPoints);
-        UpdateImage(beforeClassPerson3, person3Sprites, socialPoints);
-        UpdateImage(beforeClassTeacher, teacherSprites, academicPoints);
+        UpdateImageGameObject(beforeClassPerson1ChildrenObjects, socialPoints);
+        UpdateImageGameObject(beforeClassPerson2ChildrenObjects, socialPoints);
+        UpdateImageGameObject(beforeClassPerson3ChildrenObjects, socialPoints);
+        UpdateImageGameObject(beforeClassTeacherChildrenObjects, academicPoints);
+        UpdateImageGameObject(beforeClassBoardChildrenObjects, socialPoints);
     }
 
     private void DeactivateAllChildren(GameObject parent)
@@ -356,6 +360,29 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.LogError($"Image component not found on {obj.name}");
+        }
+    }
+
+    private void UpdateImageGameObject(GameObject[] children, int index)
+    {
+        if (index < 0 || index >= children.Length)
+        {
+            Debug.LogError($"Index {index} out of bounds for children array");
+            return;
+        }
+        foreach (GameObject child in children)
+        {
+            if (child != null)
+                child.SetActive(false);
+        }
+        if (children[index] != null)
+        {
+            children[index].SetActive(true);
+            Debug.Log($"Updated object with child at index {index}");
+        }
+        else
+        {
+            Debug.LogError($"Child at index {index} is null during UpdateImageGameObject");
         }
     }
 
