@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,6 +30,15 @@ public class GameManager : MonoBehaviour
         Day5AfterClass
     }
     private GameState currentGameState;
+
+    private Dictionary<GameState, string> stateToNiceString = new()
+    {
+        {GameState.BeforeClass, "Before Class"},
+        {GameState.Class, "Class"},
+        {GameState.Lunch, "Lunch"},
+        {GameState.AfterClass, "After Class"},
+        {GameState.Day5AfterClass, "Day 5 After Class"}
+    };
 
     // UI references
     [Header("Settings")]
@@ -82,6 +92,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject wordBankButton;
     [SerializeField] private GameObject advanceButton;
     [SerializeField] private GameObject failGameUI;
+    [SerializeField] private GameObject clockObject;
+    [SerializeField] private TMP_Text clockText;
 
     // variables
     public int CurrentDay { get; private set; }
@@ -132,6 +144,7 @@ public class GameManager : MonoBehaviour
         wordBankButton.SetActive(true);
 
         wordBank.SetActive(true);
+        clockObject.SetActive(true);
     }
 
     public void AdvanceScene()
@@ -195,6 +208,8 @@ public class GameManager : MonoBehaviour
                 PrintStats();
                 break;
         }
+        // Update clock text
+        clockText.text = $"Day {CurrentDay + 1}\n{stateToNiceString[currentGameState]}";
     }
 
     private void AdvanceDay()
@@ -208,6 +223,7 @@ public class GameManager : MonoBehaviour
         wordBank.SetActive(false);
         wordBankButton.SetActive(false);
         advanceButton.SetActive(false);
+        clockObject.SetActive(false);
         Debug.Log("Game Over");
     }
 
@@ -222,6 +238,7 @@ public class GameManager : MonoBehaviour
         wordBank.SetActive(false);
         wordBankButton.SetActive(false);
         advanceButton.SetActive(false);
+        clockObject.SetActive(false);
         failGameUI.SetActive(true);
     }
 
@@ -312,6 +329,7 @@ public class GameManager : MonoBehaviour
     private void UpdateAfterClassUI()
     {
         Debug.Log("Updating After Class UI");
+        advanceButton.SetActive(false);
         UpdateImageGameObject(afterClassPerson1ChildrenObjects, socialPoints);
         UpdateImageGameObject(afterClassPerson2ChildrenObjects, socialPoints);
         UpdateImageGameObject(afterClassPerson3ChildrenObjects, socialPoints);

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f8357b377b65af146bf1d40c6c02e2e6
+guid: d7f93c4883fefaa48a461b05fac8a203
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4463617138418292951
-    second: IMG_1303_0
+      213: 7509462722590272385
+    second: Button - Default_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_1303_0
+      name: Button - Default_0
       rect:
         serializedVersion: 2
-        x: 448
+        x: 0
         y: 0
-        width: 315
-        height: 524
+        width: 760
+        height: 180
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9276b33acdb0e02c0800000000000000
-      internalID: -4463617138418292951
+      spriteID: 18be7023f88f63860800000000000000
+      internalID: 7509462722590272385
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6e1620792a8f73a4a98fea29d238c29e
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      IMG_1303_0: -4463617138418292951
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
