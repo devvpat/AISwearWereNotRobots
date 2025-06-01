@@ -14,11 +14,18 @@ public class DragAndDropItem : MonoBehaviour, IDragHandler, IBeginDragHandler, I
 
     public WordType wordType;
 
+    [SerializeField] private bool generateRandomWord = true;
+
     private Image image;
 
     private void Start()
     {
-        image = GetComponent<Image>();        
+        image = GetComponent<Image>();
+
+        if (generateRandomWord)
+        {
+            
+        }     
     }
 
     public void OnBeginDrag(PointerEventData eventData)
