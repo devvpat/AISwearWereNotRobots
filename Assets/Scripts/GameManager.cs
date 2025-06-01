@@ -340,8 +340,7 @@ public class GameManager : MonoBehaviour
         if (res == 0) afterClassPointType = DragAndDropItem.WordType.Social;
         else afterClassPointType = DragAndDropItem.WordType.Academic;
         afterClassText.text = $"Would you like to participate in {(afterClassPointType == DragAndDropItem.WordType.Social ? "a" : "an")} " +
-                              $"{afterClassPointType.ToString().ToLower()} after class activity? You will gain {afterClassPointType.ToString().ToLower()} word(s) " +
-                              $"and lose {(afterClassPointType == DragAndDropItem.WordType.Social ? "academic" : "social")} word(s).";
+                              $"{afterClassPointType.ToString().ToLower()} after class activity? The words in your word bank will alter afterward.";
     }
 
     public void OnAfterClassButtonClick()
