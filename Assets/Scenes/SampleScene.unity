@@ -4293,7 +4293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &475414417
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22074,22 +22074,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startNumberOfKeys: 3
   newKeysPerDay: 3
-  person1Sprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  person2Sprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  person3Sprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  teacherSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   beforeClassUI: {fileID: 341757329}
   beforeClassPerson1ChildrenObjects:
   - {fileID: 1372259951}
