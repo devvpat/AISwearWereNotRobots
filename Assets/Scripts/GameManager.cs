@@ -389,7 +389,7 @@ public class GameManager : MonoBehaviour
         if (numberOfKeys > 0)
         {
             numberOfKeys--;
-            if (wbKeysText) wbKeysText.text = $"Keys Left: {numberOfKeys}";
+            if (wbKeysText) wbKeysText.text = $"x{numberOfKeys}";
             Debug.Log($"Used a key. Remaining keys: {numberOfKeys}");
             if (numberOfKeys == 0 && currentGameState == GameState.BeforeClass)
             {
@@ -429,6 +429,6 @@ public class GameManager : MonoBehaviour
     
     private void SetKeyText()
     {
-        if (wbKeysText) wbKeysText.text = $"Keys Left: {numberOfKeys}";
+        if (wbKeysText) wbKeysText.text = $"x{numberOfKeys}";
     }
 }
