@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 20569f068672646219ad5e95d0774a17
+guid: d5bc1b119a34f99458fabe6c99a7dd06
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2550931920548521993
-    second: Current Day Box_0
+      213: -3205582802463417363
+    second: IMG_1304_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Current Day Box_0
+      name: IMG_1304_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 36
-        width: 690
-        height: 538
+        x: 726
+        y: 100
+        width: 316
+        height: 443
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 908ef7af01bb66320800000000000000
-      internalID: 2550931920548521993
+      spriteID: deb1111dc6b7383d0800000000000000
+      internalID: -3205582802463417363
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Current Day Box_0: 2550931920548521993
+      IMG_1304_0: -3205582802463417363
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

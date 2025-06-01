@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -17,14 +18,18 @@ public class DragAndDropItem : MonoBehaviour, IDragHandler, IBeginDragHandler, I
     [SerializeField] private bool generateRandomWord = true;
 
     private Image image;
+    private TMP_Text wordText;
 
     private void Start()
     {
         image = GetComponent<Image>();
+        wordText = transform.GetChild(0).GetComponent<TMP_Text>();
 
-        if (generateRandomWord)
+        if (generateRandomWord) 
         {
-            
+            string[] words = wordType == WordType.Social ? Globals.SocialWords : Globals.AcademicWords;
+            int randomIndex = UnityEngine.Random.Range(0, words.Length);
+            wordText.text = words[randomIndex];
         }     
     }
 

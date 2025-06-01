@@ -70,7 +70,7 @@ public class BaseWindow : MonoBehaviour, IBeginDragHandler, IDragHandler
         Destroy(gameObject);
     }
     
-    public void DesactivateSelfGameObject()
+    public void DeactivateSelfGameObject()
     {
         gameObject.SetActive(false);
     }
