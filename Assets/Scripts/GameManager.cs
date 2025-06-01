@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject classSlot2;
     [SerializeField] private GameObject classBackgroundImage;
     [SerializeField] private Sprite[] classBackgroundSprites = new Sprite[3];
+    [SerializeField] private TMP_Text classText;
+    [SerializeField] private string[] classTexts = new string[5];
 
     [Header("Lunch")]
     [SerializeField] private GameObject lunchUI;
@@ -57,6 +59,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject lunchSlot2;
     [SerializeField] private GameObject lunchBackgroundImage;
     [SerializeField] private Sprite[] lunchBackgroundSprites = new Sprite[3];
+    [SerializeField] private TMP_Text lunchText;
+    [SerializeField] private string[] lunchTexts = new string[5];
 
     [Header("After Class")]
     [SerializeField] private GameObject afterClassUI;
@@ -228,9 +232,9 @@ public class GameManager : MonoBehaviour
         score += EvaluateSlot(classSlot1, DragAndDropItem.WordType.Academic);
         score += EvaluateSlot(classSlot2, DragAndDropItem.WordType.Academic);
         academicPoints += score == -2 ? -1 : 1; // -1 if both slots correct, else +1
-        Debug.Log($"Class Minigame Score: {score}, Academic Points: {academicPoints}");
         // clamp academicPoints to [0, 3] (inclusive)
         academicPoints = Mathf.Clamp(academicPoints, 0, 3);
+        Debug.Log($"Class Minigame Score: {score}, Academic Points: {academicPoints}");
     }
 
     private void PlayLunchMinigame()
@@ -240,9 +244,9 @@ public class GameManager : MonoBehaviour
         score += EvaluateSlot(lunchSlot1, DragAndDropItem.WordType.Social);
         score += EvaluateSlot(lunchSlot2, DragAndDropItem.WordType.Social);
         socialPoints += score == -2 ? -1 : 1; // -1 if both slots correct, else +1
-        Debug.Log($"Lunch Minigame Score: {score}, Social Points: {socialPoints}");
         // clamp socialPoints to [0, 3] (inclusive)
         socialPoints = Mathf.Clamp(socialPoints, 0, 3);
+        Debug.Log($"Lunch Minigame Score: {score}, Social Points: {socialPoints}");
     }
 
     private int EvaluateSlot(GameObject slot, DragAndDropItem.WordType wordType)
@@ -292,6 +296,7 @@ public class GameManager : MonoBehaviour
         // enable advance button if word bank is empty otherwise disable it
         advanceButton.SetActive(wordBankComp.IsEmpty());
         currMinigameWordsUsed = 0; // reset words used for class minigame
+        classText.text = classTexts[CurrentDay];
     }
 
     private void UpdateLunchUI()
@@ -301,6 +306,7 @@ public class GameManager : MonoBehaviour
         // enable advance button if word bank is empty otherwise disable it
         advanceButton.SetActive(wordBankComp.IsEmpty());
         currMinigameWordsUsed = 0; // reset words used for lunch minigame
+        lunchText.text = lunchTexts[CurrentDay];
     }
 
     private void UpdateAfterClassUI()

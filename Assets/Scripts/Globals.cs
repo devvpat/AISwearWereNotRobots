@@ -8,20 +8,26 @@ public static class Globals
     public static float CanvasScaleFactor = 1.0f;
 
     // social words
-    public static string[] SocialWords = {
-        "SOCIAL 1",
-        "SOCIAL 2",
-        "SOCIAL 3",
-        "SOCIAL 4",
-        "SOCIAL 5",
+    public readonly static string[] SocialWords = {
+        "playing",
+        "sunshine",
+        "apples",
+        "fun",
+        "super",
+        "hair",
+        "gaze",
+        "Cat",
+        "shop",
+        "drew",
+        "cute",
+        "slang",
+        "beauty",
+        "text",
+        "purse",
     };
 
     // academic words
-    public static string[] AcademicWords = {
-        "ACADEMIC 1",
-        "ACADEMIC 2",
-        "ACADEMIC 3",
-        "ACADEMIC 4",
-        "ACADEMIC 5",
+    public readonly static string[] AcademicWords = {
+        "academy",
     };
 }
