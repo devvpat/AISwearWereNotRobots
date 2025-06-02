@@ -2579,13 +2579,17 @@ PrefabInstance:
       propertyPath: m_text
       value: Sakurai
       objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_text
+      value: "Sigh, kids today don\u2019t understand the importance of [school]."
+      objectReference: {fileID: 0}
     - target: {fileID: 4306893792681720152, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: wordType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866758384955284968, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
-      value: academy
+      value: school
       objectReference: {fileID: 0}
     - target: {fileID: 6782615330004847955, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3574,13 +3578,26 @@ PrefabInstance:
       propertyPath: m_text
       value: Sakurai
       objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_text
+      value: My favorite subject growing up was [geology]. You could say it rocked.
+        Heh.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_fontSize
+      value: 31.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4306893792681720152, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: wordType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866758384955284968, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
-      value: academy
+      value: geology
       objectReference: {fileID: 0}
     - target: {fileID: 6782615330004847955, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4840,13 +4857,17 @@ PrefabInstance:
       propertyPath: m_text
       value: Blackboard
       objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_text
+      value: 'Note to self: Confirm if y truly does [equal] mx + b. - Sakurai'
+      objectReference: {fileID: 0}
     - target: {fileID: 4306893792681720152, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: wordType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866758384955284968, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
-      value: academy
+      value: equal
       objectReference: {fileID: 0}
     - target: {fileID: 6782615330004847955, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5510,13 +5531,17 @@ PrefabInstance:
       propertyPath: m_text
       value: Blackboard
       objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_text
+      value: 'Note to self: Get geology on the new high school [curriculum] - Sakurai'
+      objectReference: {fileID: 0}
     - target: {fileID: 4306893792681720152, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: wordType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866758384955284968, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
-      value: academy
+      value: curriculum
       objectReference: {fileID: 0}
     - target: {fileID: 6782615330004847955, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6880,13 +6905,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Sakurai
       objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_text
+      value: "I remember my youth\u2026 Don\u2019t take it for [granite], kid. Trust
+        me."
+      objectReference: {fileID: 0}
     - target: {fileID: 4306893792681720152, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: wordType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866758384955284968, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
-      value: academy
+      value: granite
       objectReference: {fileID: 0}
     - target: {fileID: 6782615330004847955, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7104,13 +7134,17 @@ PrefabInstance:
       propertyPath: m_text
       value: Blackboard
       objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_text
+      value: 'TODO: Teach class the difference between [Napoleon] and Neopolitan.'
+      objectReference: {fileID: 0}
     - target: {fileID: 4306893792681720152, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: wordType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866758384955284968, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
-      value: academy
+      value: Napoleon
       objectReference: {fileID: 0}
     - target: {fileID: 6782615330004847955, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7788,13 +7822,26 @@ PrefabInstance:
       propertyPath: m_text
       value: Laptop
       objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_text
+      value: 'UChewbe: [Derivatives] for dummies! (TUTORIAL)(5 AM CHALLENGE)(NOT
+        CLICKBAIT)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_fontSize
+      value: 27.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4306893792681720152, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: wordType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866758384955284968, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
-      value: academy
+      value: Derivatives
       objectReference: {fileID: 0}
     - target: {fileID: 6782615330004847955, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9038,13 +9085,26 @@ PrefabInstance:
       propertyPath: m_text
       value: Laptop
       objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_text
+      value: 'Bong: Is Goggle, Bong, or FlameWolf a better search [engine]? No bias
+        please.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_fontSize
+      value: 30.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4306893792681720152, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: wordType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866758384955284968, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
-      value: academy
+      value: engine
       objectReference: {fileID: 0}
     - target: {fileID: 6782615330004847955, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9232,13 +9292,25 @@ PrefabInstance:
       propertyPath: m_text
       value: Laptop
       objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_text
+      value: Hey FlopGPT! How does one use a [pencil] sharpener? Asking for a friend.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_fontSize
+      value: 31.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4306893792681720152, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: wordType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866758384955284968, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
-      value: academy
+      value: pencil
       objectReference: {fileID: 0}
     - target: {fileID: 6782615330004847955, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9959,13 +10031,17 @@ PrefabInstance:
       propertyPath: m_text
       value: Laptop
       objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_text
+      value: "\u201CBreaking News: An apple a day keeps the [doctor] away!!\u201D"
+      objectReference: {fileID: 0}
     - target: {fileID: 4306893792681720152, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: wordType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866758384955284968, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
-      value: academy
+      value: doctor
       objectReference: {fileID: 0}
     - target: {fileID: 6782615330004847955, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -12466,13 +12542,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Blackboard
       objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_text
+      value: "Homework: Read the [novel], \u2018Tales of Smuckleberry Gin\u2019 over
+        the weekend"
+      objectReference: {fileID: 0}
     - target: {fileID: 4306893792681720152, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: wordType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866758384955284968, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
-      value: academy
+      value: novel
       objectReference: {fileID: 0}
     - target: {fileID: 6782615330004847955, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -13181,13 +13262,17 @@ PrefabInstance:
       propertyPath: m_text
       value: Laptop
       objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_text
+      value: 'Goggle: Show me an [article] about the days of the week on Week-epedia.'
+      objectReference: {fileID: 0}
     - target: {fileID: 4306893792681720152, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: wordType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866758384955284968, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
-      value: academy
+      value: article
       objectReference: {fileID: 0}
     - target: {fileID: 6782615330004847955, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -13639,13 +13724,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Sakurai
       objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_text
+      value: "Are you [prepared] for today? Don\u2019t worry, it\u2019s okay to be
+        sediment-al."
+      objectReference: {fileID: 0}
     - target: {fileID: 4306893792681720152, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: wordType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866758384955284968, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
-      value: academy
+      value: prepared
       objectReference: {fileID: 0}
     - target: {fileID: 6782615330004847955, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -13786,13 +13876,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Sakurai
       objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_text
+      value: "It\u2019s an important [class] today. I don\u2019t want to see you
+        dilly-dallying\u2026"
+      objectReference: {fileID: 0}
     - target: {fileID: 4306893792681720152, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: wordType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866758384955284968, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
-      value: academy
+      value: class
       objectReference: {fileID: 0}
     - target: {fileID: 6782615330004847955, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -15877,13 +15972,17 @@ PrefabInstance:
       propertyPath: m_text
       value: Blackboard
       objectReference: {fileID: 0}
+    - target: {fileID: 3819741876125846617, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: m_text
+      value: 'Homework: Chapter 5-2, Page 127 in your [Chemistry] textbooks.'
+      objectReference: {fileID: 0}
     - target: {fileID: 4306893792681720152, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: wordType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866758384955284968, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
-      value: academy
+      value: Chemistry
       objectReference: {fileID: 0}
     - target: {fileID: 6782615330004847955, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -16214,11 +16313,14 @@ MonoBehaviour:
   - {fileID: 0}
   classText: {fileID: 1576536238}
   classTexts:
-  - a
-  - b
-  - c
-  - d
-  - e
+  - "Sakurai: Ai, Have you been paying attention? What\u2019s the answer to this
+    question?"
+  - 'Sakurai: Earth to Ai. Hello? Do you mind answering this question?'
+  - "Sakurai: Let\u2019s see\u2026 Ai! Come up and write the answer on the board."
+  - "Sakurai: Hm, Who would know the answer\u2026 I know, Ai can you please come
+    up?"
+  - "Sakurai: Let\u2019s end class today with an example. Ai, do you mind answering
+    this?"
   lunchUI: {fileID: 1282852163}
   lunchSlot1: {fileID: 931317798}
   lunchSlot2: {fileID: 480881592}

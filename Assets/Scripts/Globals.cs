@@ -28,6 +28,20 @@ public static class Globals
 
     // academic words
     public readonly static string[] AcademicWords = {
-        "academy",
+        "class",
+        "school",
+        "geology",
+        "granite",
+        "prepared",
+        "doctor",
+        "pencil",
+        "article",
+        "engine",
+        "Derivatives",
+        "Napolean",
+        "Chemistry",
+        "curriculum",
+        "equal",
+        "novel",
     };
 }
