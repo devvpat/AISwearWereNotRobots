@@ -7,8 +7,8 @@ public static class Globals
     public static float CanvasHeight = 1080;
     public static float CanvasScaleFactor = 1.0f;
 
-    public readonly static string titleSceneName = "TitleScreen";
-    public readonly static string gameSceneName = "GameScene";
+    public readonly static string TitleSceneName = "TitleScreen";
+    public readonly static string GameSceneName = "GameScene";
 
     // social words
     public readonly static string[] SocialWords = {

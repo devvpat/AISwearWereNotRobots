@@ -41,6 +41,6 @@ public class EndScene : MonoBehaviour
 
     public void EndGame()
     {
-        SceneManager.LoadScene(Globals.titleSceneName);
+        SceneManager.LoadScene(Globals.TitleSceneName);
     }
 }

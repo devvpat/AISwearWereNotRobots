@@ -4,6 +4,6 @@ public class TitleScreenCanvas : MonoBehaviour
 {
     public void LoadGameScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(Globals.gameSceneName);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(Globals.GameSceneName);
     }
 }
