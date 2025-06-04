@@ -6,4 +6,9 @@ public class TitleScreenCanvas : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(Globals.GameSceneName);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
