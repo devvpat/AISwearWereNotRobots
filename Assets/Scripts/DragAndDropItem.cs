@@ -45,7 +45,14 @@ public class DragAndDropItem : MonoBehaviour, IDragHandler, IBeginDragHandler, I
     public void OnDrag(PointerEventData eventData)
     {
         Debug.Log("Dragging");
-        transform.position = Input.mousePosition;
+        // Convert screen position to world position
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        // Set z-axis to match the object's current z position (to avoid moving it on the z-axis)
+        worldPosition.z = transform.position.z;
+
+        // Update the object's position to the new world position
+        transform.position = worldPosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
