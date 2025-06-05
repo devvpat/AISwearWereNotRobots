@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ddbe2bd18078ec34d9e1f92cb6c2b720
+guid: 6169f0926ba133741957aeefa82c3e73
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6582327362614717434
-    second: 182-1823074_vignette-1-dark-light-effect-png_0
+      213: 7093308620772156485
+    second: final cutscene wip_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 182-1823074_vignette-1-dark-light-effect-png_0
+      name: final cutscene wip_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 732
+        width: 1600
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: afbebf39cdf195b50800000000000000
-      internalID: 6582327362614717434
+      spriteID: 544275fcb9e707260800000000000000
+      internalID: 7093308620772156485
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      182-1823074_vignette-1-dark-light-effect-png_0: 6582327362614717434
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

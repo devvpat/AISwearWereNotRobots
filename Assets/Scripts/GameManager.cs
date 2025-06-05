@@ -235,6 +235,12 @@ public class GameManager : MonoBehaviour
         wordBankButton.SetActive(false);
         advanceButton.SetActive(false);
         clockObject.SetActive(false);
+
+        socialPoints = 0;
+        academicPoints = 0;
+        UpdateEffects();
+        Level0.Stop();
+
         Debug.Log("Game Over");
     }
 
