@@ -87,9 +87,14 @@ public class GameManager : MonoBehaviour
     [Header("Day 5 After Class")]
     [SerializeField] private GameObject day5AfterClassUI;
 
-    [Header("Effects")]
+    [Header("Visual Effects")]
     [SerializeField] private Image vignetteImage;
     [SerializeField] private Volume glitchVolume;
+
+    [Header("SFX / Music")]
+    [SerializeField] private AudioSource Level0;
+    [SerializeField] private AudioSource Level1;
+    [SerializeField] private AudioSource Glitch;
 
     [Header("Other References")]
     [SerializeField] private GameObject wordBank;
@@ -469,13 +474,23 @@ public class GameManager : MonoBehaviour
     }
     private void UpdateEffects()
     {
-        // Vignette (fades in at 1+)
+        // Vignette
         bool showVignette = socialPoints >= 1 || academicPoints >= 1;
         bool hideVignette = socialPoints < 1 && academicPoints < 1;
 
-        // Glitch (activates at 2+)
+        // Glitch
         bool showGlitch = socialPoints >= 2 || academicPoints >= 2;
         bool hideGlitch = socialPoints < 2 && academicPoints < 2;
+
+        //Audio
+        bool isLevel2 = socialPoints >= 2 || academicPoints >= 2;
+        bool isLevel1Trigger = (socialPoints == 1 || academicPoints == 1);
+        bool isLevel0 = socialPoints == 0 && academicPoints == 0;
+
+        // Glitch SFX at Level 2
+
+
+        //--------- VFX ---------
 
         // Update vignette alpha
         Color color = vignetteImage.color;
@@ -503,6 +518,26 @@ public class GameManager : MonoBehaviour
                 glitchVolume.enabled = false;
             }
         }
+
+        //----------- SFX / MUSIC -------------
+
+        //Level 0
+        if (isLevel0 && !Level0.isPlaying)
+            Level0.Play();
+        else if (!isLevel0 && Level0.isPlaying)
+            Level0.Stop();
+
+        //Level 1
+        if (isLevel1Trigger && !Level1.isPlaying)
+            Level1.Play();
+        else if (isLevel0 && Level1.isPlaying)  // only stop if we go back to level 0
+            Level1.Stop();
+
+        //Level 2
+        if (isLevel2 && !Glitch.isPlaying)
+            Glitch.Play();
+        else if (!isLevel2 && Glitch.isPlaying)
+            Glitch.Stop();
     }
 }
 
