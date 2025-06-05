@@ -3,6 +3,8 @@ using TMPro;
 using System;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class GameManager : MonoBehaviour
 {
@@ -33,11 +35,11 @@ public class GameManager : MonoBehaviour
 
     private Dictionary<GameState, string> stateToNiceString = new()
     {
-        {GameState.BeforeClass, "Before Class"},
-        {GameState.Class, "Class"},
-        {GameState.Lunch, "Lunch"},
-        {GameState.AfterClass, "After Class"},
-        {GameState.Day5AfterClass, "Day 5 After Class"}
+        { GameState.BeforeClass, "Before Class" },
+        { GameState.Class, "Class" },
+        { GameState.Lunch, "Lunch" },
+        { GameState.AfterClass, "After Class" },
+        { GameState.Day5AfterClass, "Day 5 After Class" }
     };
 
     // UI references
@@ -84,6 +86,15 @@ public class GameManager : MonoBehaviour
 
     [Header("Day 5 After Class")]
     [SerializeField] private GameObject day5AfterClassUI;
+
+    [Header("Visual Effects")]
+    [SerializeField] private Image vignetteImage;
+    [SerializeField] private Volume glitchVolume;
+
+    [Header("SFX / Music")]
+    [SerializeField] private AudioSource Level0;
+    [SerializeField] private AudioSource Level1;
+    [SerializeField] private AudioSource Glitch;
 
     [Header("Other References")]
     [SerializeField] private GameObject wordBank;
@@ -296,6 +307,8 @@ public class GameManager : MonoBehaviour
         UpdateImageGameObject(beforeClassPerson3ChildrenObjects, socialPoints);
         UpdateImageGameObject(beforeClassTeacherChildrenObjects, academicPoints);
         UpdateImageGameObject(beforeClassBoardChildrenObjects, socialPoints);
+
+        UpdateEffects();
     }
 
     private void DeactivateAllChildren(GameObject parent)
@@ -314,6 +327,8 @@ public class GameManager : MonoBehaviour
         advanceButton.SetActive(wordBankComp.IsEmpty());
         currMinigameWordsUsed = 0; // reset words used for class minigame
         classText.text = classTexts[CurrentDay];
+
+        UpdateEffects();
     }
 
     private void UpdateLunchUI()
@@ -324,6 +339,8 @@ public class GameManager : MonoBehaviour
         advanceButton.SetActive(wordBankComp.IsEmpty());
         currMinigameWordsUsed = 0; // reset words used for lunch minigame
         lunchText.text = lunchTexts[CurrentDay];
+
+        UpdateEffects();
     }
 
     private void UpdateAfterClassUI()
@@ -341,6 +358,8 @@ public class GameManager : MonoBehaviour
         else afterClassPointType = DragAndDropItem.WordType.Academic;
         afterClassText.text = $"Would you like to participate in {(afterClassPointType == DragAndDropItem.WordType.Social ? "a" : "an")} " +
                               $"{afterClassPointType.ToString().ToLower()} after class activity? The words in your word bank will alter afterward.";
+
+        UpdateEffects();
     }
 
     public void OnAfterClassButtonClick()
@@ -443,15 +462,82 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
     public void AddKey(int amount)
     {
         numberOfKeys += amount;
         SetKeyText();
     }
-    
+
     private void SetKeyText()
     {
         if (wbKeysText) wbKeysText.text = $"x{numberOfKeys}";
     }
+    private void UpdateEffects()
+    {
+        // Vignette
+        bool showVignette = socialPoints >= 1 || academicPoints >= 1;
+        bool hideVignette = socialPoints < 1 && academicPoints < 1;
+
+        // Glitch
+        bool showGlitch = socialPoints >= 2 || academicPoints >= 2;
+        bool hideGlitch = socialPoints < 2 && academicPoints < 2;
+
+        //Audio
+        bool isLevel2 = socialPoints >= 2 || academicPoints >= 2;
+        bool isLevel1Trigger = (socialPoints == 1 || academicPoints == 1);
+        bool isLevel0 = socialPoints == 0 && academicPoints == 0;
+
+        // Glitch SFX at Level 2
+
+
+        //--------- VFX ---------
+
+        // Update vignette alpha
+        Color color = vignetteImage.color;
+
+        if (showVignette && color.a == 0f)
+        {
+            color.a = 1f;
+            vignetteImage.color = color;
+        }
+        else if (hideVignette && color.a > 0f)
+        {
+            color.a = 0f;
+            vignetteImage.color = color;
+        }
+
+        // Enable/disable glitch volume
+        if (glitchVolume != null)
+        {
+            if (showGlitch && !glitchVolume.enabled)
+            {
+                glitchVolume.enabled = true;
+            }
+            else if (hideGlitch && glitchVolume.enabled)
+            {
+                glitchVolume.enabled = false;
+            }
+        }
+
+        //----------- SFX / MUSIC -------------
+
+        //Level 0
+        if (isLevel0 && !Level0.isPlaying)
+            Level0.Play();
+        else if (!isLevel0 && Level0.isPlaying)
+            Level0.Stop();
+
+        //Level 1
+        if (isLevel1Trigger && !Level1.isPlaying)
+            Level1.Play();
+        else if (isLevel0 && Level1.isPlaying)  // only stop if we go back to level 0
+            Level1.Stop();
+
+        //Level 2
+        if (isLevel2 && !Glitch.isPlaying)
+            Glitch.Play();
+        else if (!isLevel2 && Glitch.isPlaying)
+            Glitch.Stop();
+    }
 }
+
