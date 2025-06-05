@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sara lvl 1_0: -7816715155357020437
+      Sara lvl 1_1: -2061886666269629846
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

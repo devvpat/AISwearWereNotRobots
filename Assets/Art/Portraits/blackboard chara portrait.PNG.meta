@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      blackboard chara portrait_0: 4919273530154422146
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -5065,6 +5065,8 @@ MonoBehaviour:
   imageArea: {fileID: 1206645443}
   nextButton: {fileID: 2090543346}
   endButton: {fileID: 1086004446}
+  glitchVolume: {fileID: 1445165025}
+  glitchSFX: {fileID: 792401190}
 --- !u!1 &646354770
 GameObject:
   m_ObjectHideFlags: 0
