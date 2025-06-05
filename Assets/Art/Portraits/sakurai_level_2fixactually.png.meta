@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sakurai_level_2fixactually_0: -1476248953206423450
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class EndScene : MonoBehaviour
 {
@@ -15,6 +17,8 @@ public class EndScene : MonoBehaviour
     [SerializeField] private Image imageArea;
     [SerializeField] private Button nextButton;
     [SerializeField] private Button endButton;
+    [SerializeField] private Volume glitchVolume;
+    [SerializeField] private AudioSource glitchSFX;
 
     private int[] partLineLengths = new int[] { 13, 16, 7, 18, 8 };
 
@@ -40,10 +44,23 @@ public class EndScene : MonoBehaviour
             {
                 ShowEndText();
                 return;
-            } 
+            }
             else
             {
                 imageArea.sprite = partsImages[curImg];
+
+                // Enable glitch only during Part 3
+                bool isPart3 = (curImg == 2);
+                if (glitchVolume != null)
+                    glitchVolume.enabled = isPart3;
+
+                if (glitchSFX != null)
+                {
+                    if (isPart3 && !glitchSFX.isPlaying)
+                        glitchSFX.Play();
+                    else if (!isPart3 && glitchSFX.isPlaying)
+                        glitchSFX.Stop();
+                }
             }
             curLine = 0;
         }
@@ -70,4 +87,5 @@ public class EndScene : MonoBehaviour
     {
         SceneManager.LoadScene(Globals.TitleSceneName);
     }
+
 }
