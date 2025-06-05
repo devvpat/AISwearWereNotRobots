@@ -62,6 +62,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject classSlot2;
     [SerializeField] private GameObject classBackgroundImage;
     [SerializeField] private Sprite[] classBackgroundSprites = new Sprite[3];
+    [SerializeField] private GameObject classProfImage;
+    [SerializeField] private Sprite[] classProfSprites = new Sprite[3];
     [SerializeField] private TMP_Text classText;
     [SerializeField] private string[] classTexts = new string[5];
 
@@ -329,6 +331,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Updating Class UI");
         UpdateImage(classBackgroundImage, classBackgroundSprites, academicPoints);
+        UpdateImage(classProfImage, classProfSprites, academicPoints);
         // enable advance button if word bank is empty otherwise disable it
         advanceButton.SetActive(wordBankComp.IsEmpty());
         currMinigameWordsUsed = 0; // reset words used for class minigame
