@@ -481,6 +481,7 @@ public class GameManager : MonoBehaviour
     {
         if (wbKeysText) wbKeysText.text = $"x{numberOfKeys}";
     }
+
     private void UpdateEffects()
     {
         // Vignette
@@ -547,6 +548,16 @@ public class GameManager : MonoBehaviour
             Glitch.Play();
         else if (!isLevel2 && Glitch.isPlaying)
             Glitch.Stop();
+    }
+
+    public int GetSocialPoints()
+    {
+        return socialPoints;
+    }
+
+    public int GetAcademicPoints()
+    {
+        return academicPoints;
     }
 }
 

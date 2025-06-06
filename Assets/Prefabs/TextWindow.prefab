@@ -95,6 +95,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDraggable: 1
   isConfined: 1
+  isPortrait: 0
+  pointType: 0
+  levelSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  portraitImage: {fileID: 2295891643126264332}
 --- !u!1 &181109096099684757
 GameObject:
   m_ObjectHideFlags: 0

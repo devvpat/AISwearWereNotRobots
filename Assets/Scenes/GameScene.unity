@@ -627,6 +627,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2055819133512272068, guid: 3d5d3bda56326b645aa961b7bb3f8dbf, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2055819133512272068, guid: 3d5d3bda56326b645aa961b7bb3f8dbf, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -4153527020511613006, guid: fe9f31984ff5f2f4faec029b645657e8, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -1779294926538752918, guid: 8df9a0a26e3bf1640a808097441e8dd0, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Asa
@@ -807,6 +823,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 313252726643461397, guid: dd94df15da852af41b4e2efb9a8c46f9, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 313252726643461397, guid: dd94df15da852af41b4e2efb9a8c46f9, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -2061886666269629846, guid: b3c8ef10a1d3fba4c829a86b289580c3, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -2188377996396129052, guid: 7d8db2806a248084e9750924dc75ddee, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Sara
@@ -1058,6 +1090,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2055819133512272068, guid: 3d5d3bda56326b645aa961b7bb3f8dbf, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2055819133512272068, guid: 3d5d3bda56326b645aa961b7bb3f8dbf, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -4153527020511613006, guid: fe9f31984ff5f2f4faec029b645657e8, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -1779294926538752918, guid: 8df9a0a26e3bf1640a808097441e8dd0, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Asa
@@ -2918,6 +2966,26 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1820895883080592751, guid: f319725ee021b82498a006f167b9dff1, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: pointType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -1820895883080592751, guid: f319725ee021b82498a006f167b9dff1, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -6909095129318914329, guid: 4d880da354a19c047afbdae7442ccc7e, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -1476248953206423450, guid: b6a81074d2af0fd4793e068e9e948c03, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Sakurai
@@ -3850,6 +3918,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2055819133512272068, guid: 3d5d3bda56326b645aa961b7bb3f8dbf, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2055819133512272068, guid: 3d5d3bda56326b645aa961b7bb3f8dbf, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -4153527020511613006, guid: fe9f31984ff5f2f4faec029b645657e8, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -1779294926538752918, guid: 8df9a0a26e3bf1640a808097441e8dd0, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Asa
@@ -4073,6 +4157,26 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1820895883080592751, guid: f319725ee021b82498a006f167b9dff1, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: pointType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -1820895883080592751, guid: f319725ee021b82498a006f167b9dff1, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -6909095129318914329, guid: 4d880da354a19c047afbdae7442ccc7e, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -1476248953206423450, guid: b6a81074d2af0fd4793e068e9e948c03, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Sakurai
@@ -4378,6 +4482,10 @@ PrefabInstance:
     - target: {fileID: 147902672775200233, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_Name
       value: TextWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: portraitImage
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3576592616327423995, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_Enabled
@@ -4790,6 +4898,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 313252726643461397, guid: dd94df15da852af41b4e2efb9a8c46f9, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 313252726643461397, guid: dd94df15da852af41b4e2efb9a8c46f9, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -2061886666269629846, guid: b3c8ef10a1d3fba4c829a86b289580c3, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -2188377996396129052, guid: 7d8db2806a248084e9750924dc75ddee, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Sara
@@ -5720,6 +5844,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Blackboard
@@ -6543,6 +6683,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Blackboard
@@ -7359,6 +7515,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5775401297692843867, guid: e8839f8b26dce3d44a665579ae4d9542, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -5775401297692843867, guid: e8839f8b26dce3d44a665579ae4d9542, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4437461449719737895, guid: ee6e2abbf324cf54fbe87e070cf78fa3, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3092707354343642508, guid: dcce37047dafb8e49bce01224d54782f, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Rin
@@ -7821,6 +7993,26 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1820895883080592751, guid: f319725ee021b82498a006f167b9dff1, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: pointType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -1820895883080592751, guid: f319725ee021b82498a006f167b9dff1, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -6909095129318914329, guid: 4d880da354a19c047afbdae7442ccc7e, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -1476248953206423450, guid: b6a81074d2af0fd4793e068e9e948c03, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Sakurai
@@ -8070,6 +8262,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Blackboard
@@ -8241,6 +8449,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5775401297692843867, guid: e8839f8b26dce3d44a665579ae4d9542, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -5775401297692843867, guid: e8839f8b26dce3d44a665579ae4d9542, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4437461449719737895, guid: ee6e2abbf324cf54fbe87e070cf78fa3, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3092707354343642508, guid: dcce37047dafb8e49bce01224d54782f, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Rin
@@ -8664,6 +8888,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDraggable: 1
   isConfined: 1
+  isPortrait: 0
+  pointType: 0
+  levelSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  portraitImage: {fileID: 0}
   slotHolder: {fileID: 967947175}
   defaultWordPrefab: {fileID: 7461729876551674940, guid: ce4c262fa98bab94885287b1e9531323, type: 3}
   defaultAcademicWordPrefab: {fileID: 7461729876551674940, guid: 8d194d0d6b60145579f5460b1a54ae82, type: 3}
@@ -9005,6 +9236,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2295891643126264332, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: pointType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
       value: 
       objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
@@ -10241,6 +10492,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2055819133512272068, guid: 3d5d3bda56326b645aa961b7bb3f8dbf, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2055819133512272068, guid: 3d5d3bda56326b645aa961b7bb3f8dbf, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -4153527020511613006, guid: fe9f31984ff5f2f4faec029b645657e8, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -1779294926538752918, guid: 8df9a0a26e3bf1640a808097441e8dd0, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Asa
@@ -10568,6 +10835,26 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: pointType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Laptop
@@ -10793,6 +11080,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2295891643126264332, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: pointType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
       value: 
       objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
@@ -11554,6 +11861,26 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: pointType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Laptop
@@ -11774,6 +12101,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 313252726643461397, guid: dd94df15da852af41b4e2efb9a8c46f9, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 313252726643461397, guid: dd94df15da852af41b4e2efb9a8c46f9, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -2061886666269629846, guid: b3c8ef10a1d3fba4c829a86b289580c3, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -2188377996396129052, guid: 7d8db2806a248084e9750924dc75ddee, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Sara
@@ -13251,6 +13594,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 313252726643461397, guid: dd94df15da852af41b4e2efb9a8c46f9, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 313252726643461397, guid: dd94df15da852af41b4e2efb9a8c46f9, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -2061886666269629846, guid: b3c8ef10a1d3fba4c829a86b289580c3, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -2188377996396129052, guid: 7d8db2806a248084e9750924dc75ddee, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Sara
@@ -14360,6 +14719,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Blackboard
@@ -14573,6 +14948,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2055819133512272068, guid: 3d5d3bda56326b645aa961b7bb3f8dbf, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2055819133512272068, guid: 3d5d3bda56326b645aa961b7bb3f8dbf, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -4153527020511613006, guid: fe9f31984ff5f2f4faec029b645657e8, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -1779294926538752918, guid: 8df9a0a26e3bf1640a808097441e8dd0, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Asa
@@ -14889,6 +15280,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5775401297692843867, guid: e8839f8b26dce3d44a665579ae4d9542, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -5775401297692843867, guid: e8839f8b26dce3d44a665579ae4d9542, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4437461449719737895, guid: ee6e2abbf324cf54fbe87e070cf78fa3, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3092707354343642508, guid: dcce37047dafb8e49bce01224d54782f, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Rin
@@ -15140,6 +15547,26 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: pointType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -6764159178435417780, guid: 67c3968254107b344ae52b91f4f8327c, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Laptop
@@ -15311,6 +15738,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5775401297692843867, guid: e8839f8b26dce3d44a665579ae4d9542, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -5775401297692843867, guid: e8839f8b26dce3d44a665579ae4d9542, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4437461449719737895, guid: ee6e2abbf324cf54fbe87e070cf78fa3, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3092707354343642508, guid: dcce37047dafb8e49bce01224d54782f, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Rin
@@ -15642,6 +16085,26 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1820895883080592751, guid: f319725ee021b82498a006f167b9dff1, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: pointType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -1820895883080592751, guid: f319725ee021b82498a006f167b9dff1, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -6909095129318914329, guid: 4d880da354a19c047afbdae7442ccc7e, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -1476248953206423450, guid: b6a81074d2af0fd4793e068e9e948c03, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Sakurai
@@ -15814,6 +16277,26 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1820895883080592751, guid: f319725ee021b82498a006f167b9dff1, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: pointType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -1820895883080592751, guid: f319725ee021b82498a006f167b9dff1, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -6909095129318914329, guid: 4d880da354a19c047afbdae7442ccc7e, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -1476248953206423450, guid: b6a81074d2af0fd4793e068e9e948c03, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Sakurai
@@ -16182,6 +16665,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TextWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: portraitImage
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3576592616327423995, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -16357,6 +16844,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5775401297692843867, guid: e8839f8b26dce3d44a665579ae4d9542, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -5775401297692843867, guid: e8839f8b26dce3d44a665579ae4d9542, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4437461449719737895, guid: ee6e2abbf324cf54fbe87e070cf78fa3, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3092707354343642508, guid: dcce37047dafb8e49bce01224d54782f, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Rin
@@ -18085,6 +18588,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 4919273530154422146, guid: 4f425368cc6d3d04497b1a010f365a7b, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Blackboard
@@ -18256,6 +18775,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 313252726643461397, guid: dd94df15da852af41b4e2efb9a8c46f9, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 313252726643461397, guid: dd94df15da852af41b4e2efb9a8c46f9, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -2061886666269629846, guid: b3c8ef10a1d3fba4c829a86b289580c3, type: 3}
+    - target: {fileID: 3111742884153840710, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
+      propertyPath: 'levelSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -2188377996396129052, guid: 7d8db2806a248084e9750924dc75ddee, type: 3}
     - target: {fileID: 3613358971577217455, guid: 0a334a4e55015ab4fb8cfb63e8c38ff5, type: 3}
       propertyPath: m_text
       value: Sara

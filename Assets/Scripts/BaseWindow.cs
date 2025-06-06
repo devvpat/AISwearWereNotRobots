@@ -1,10 +1,17 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class BaseWindow : MonoBehaviour, IBeginDragHandler, IDragHandler
 {
     [SerializeField] protected bool isDraggable = true;
     [SerializeField] protected bool isConfined = true;
+
+    [Header("Portrait Only Settings")]
+    [SerializeField] protected bool isPortrait = false;
+    [SerializeField] protected DragAndDropItem.WordType pointType = DragAndDropItem.WordType.Social;
+    [SerializeField] protected Sprite[] levelSprites = new Sprite[3];
+    [SerializeField] protected Image portraitImage;
 
     protected RectTransform rectTransform;
 
@@ -69,9 +76,18 @@ public class BaseWindow : MonoBehaviour, IBeginDragHandler, IDragHandler
     {
         Destroy(gameObject);
     }
-    
+
     public void DeactivateSelfGameObject()
     {
         gameObject.SetActive(false);
+    }
+
+    void OnEnable()
+    {
+        if (isPortrait)
+        {
+            int level = pointType == DragAndDropItem.WordType.Social ? GameManager.Instance.GetSocialPoints() : GameManager.Instance.GetAcademicPoints();
+            portraitImage.sprite = levelSprites[level];
+        }
     }
 }
